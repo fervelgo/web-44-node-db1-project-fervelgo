@@ -17,7 +17,7 @@ const updateById = (id, account) => {
 }
 
 const deleteById = id => {
-  return db('budget')
+  return db('budget').where({id : id}).del()
 }
 
 module.exports = {
