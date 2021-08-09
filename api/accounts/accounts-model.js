@@ -9,15 +9,15 @@ const getById = id => {
 }
 
 const create = account => {
-  
+  return db('budget').insert(account)
 }
 
 const updateById = (id, account) => {
-  // DO YOUR MAGIC
+  return db('budget').update({id: id, account: account})
 }
 
 const deleteById = id => {
-  // DO YOUR MAGIC
+  return db('budget')
 }
 
 module.exports = {
